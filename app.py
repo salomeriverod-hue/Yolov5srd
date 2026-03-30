@@ -12,9 +12,7 @@ st.set_page_config(
     layout="wide"
 )
 
-image = Image.open('3254fd577215f67b78ec3df76ac7bdb1.jpg')
 
-st.image(image,width=300)
 
 @st.cache_resource
 def load_model():
@@ -27,6 +25,9 @@ def load_model():
         return None
 
 st.title("🔍 Detección de Objetos en Imágenes")
+image = Image.open('3254fd577215f67b78ec3df76ac7bdb1.jpg')
+
+st.image(image,width=300)
 st.markdown("Esta aplicación utiliza YOLOv5 para detectar objetos en imágenes capturadas con tu cámara.")
 
 with st.spinner("Cargando modelo YOLOv5..."):
