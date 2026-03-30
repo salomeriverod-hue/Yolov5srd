@@ -4,12 +4,17 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import torch
+from PIL import Image
 
 st.set_page_config(
     page_title="Detección de Objetos en Tiempo Real",
     page_icon="🔍",
     layout="wide"
 )
+
+image = Image.open('3254fd577215f67b78ec3df76ac7bdb1.jpg')
+
+st.image(image,width=300)
 
 @st.cache_resource
 def load_model():
